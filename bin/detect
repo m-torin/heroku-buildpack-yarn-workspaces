@@ -8,3 +8,6 @@ if [ ! -f "${BUILD_DIR}/yarn.lock" ]; then
   echo "No yarn.lock found in root directory"
   exit 1
 fi
+
+echo "Yarn"
+exit 0
