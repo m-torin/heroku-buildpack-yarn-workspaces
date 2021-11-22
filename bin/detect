@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # This pack is valid for apps with yarn.lock in root directory
 
