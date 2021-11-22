@@ -3,7 +3,7 @@ on:
     branches:
       - master
 
-name: "Trigger: Push action"
+name: "Perform shellcheck"
 
 jobs:
   shellcheck:
@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: "./bin"
