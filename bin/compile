@@ -21,7 +21,7 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
-    cp "${BUILD_DIR}/yarn.lock" "${STAGE}/${APP_BASE}"
+    cp "${BUILD_DIR}/yarn.lock" "${STAGE}/$(basename "$APP_BASE")"
 )
 
 echo "Copied yarn.lock to ${APP_BASE} directory." | indent
