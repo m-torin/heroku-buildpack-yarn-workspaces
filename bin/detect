@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# This pack is valid for apps with yarn.lock in root directory
+
+BUILD_DIR="$1"
+
+if [ ! -f "${BUILD_DIR}/yarn.lock" ]; then
+  echo "No yarn.lock found in root directory"
+  exit 1
+fi
