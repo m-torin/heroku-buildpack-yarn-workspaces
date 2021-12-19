@@ -9,5 +9,15 @@ if [ ! -f "${BUILD_DIR}/yarn.lock" ]; then
   exit 1
 fi
 
+if [ ! -f "${BUILD_DIR}/.yarnrc.yml" ]; then
+  echo "No .yarnrc.yml found in root directory"
+  exit 1
+fi
+
+if [ ! -d "${BUILD_DIR}/.yarn" ]; then
+  echo "No .yarn folder found in root directory"
+  exit 1
+fi
+
 echo "Yarn"
 exit 0
