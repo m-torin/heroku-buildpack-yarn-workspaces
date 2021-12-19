@@ -27,6 +27,7 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 )
 
 echo "Copied yarn.lock to ${APP_BASE} directory." | indent
+echo "Copied .yarnrc to ${APP_BASE} directory." | indent
 
 (
     rm -rf "${BUILD_DIR:?}"/* &&
